@@ -1,0 +1,72 @@
+<form class="form" #frmLogin="ngForm" (ngSubmit)="onRegister(frmLogin)">
+  <h2 class="form__title">Registro</h2>
+
+  <div class="form__container">
+    <div class="form__group">
+      <input
+        type="text"
+        id="username"
+        name="nombre"
+        class="form__input"
+        placeholder="Nombre"
+        ngModel
+        required
+      />
+      <label for="nombre" class="form__label">Nombre:</label>
+      <span class="form_line"></span>
+    </div>
+    <div class="form__group">
+      <input
+        type="text"
+        id="username"
+        name="correo"
+        class="form__input"
+        placeholder="Correo"
+        ngModel
+        required
+      />
+      <label for="correo" class="form__label">Correo:</label>
+      <span class="form_line"></span>
+    </div>
+    <div class="form__group">
+      <input
+        type="password"
+        id="password"
+        name="password"
+        class="form__input"
+        placeholder="Contraseña"
+        ngModel
+        required
+      />
+      <label for="password" class="form__label">Contraseña:</label>
+      <span class="form_line"></span>
+    </div>
+    <div class="form__group">
+      <input
+        type="text"
+        id="telefono"
+        name="telefono"
+        class="form__input"
+        placeholder="telefono"
+        ngModel
+        required
+      />
+      <label for="telefono" class="form__label">Teléfono:</label>
+      <span class="form_line"></span>
+    </div>
+    <div class="form__group">
+      <input
+        type="text"
+        id="direccion"
+        name="direccion"
+        class="form__input"
+        placeholder="dirección"
+        ngModel
+        required
+      />
+      <label for="direccion" class="form__label">Dirección:</label>
+      <span class="form_line"></span>
+    </div>
+    <input type="submit" class="form__submit" value="Registrarse" />
+  </div>
+</form>

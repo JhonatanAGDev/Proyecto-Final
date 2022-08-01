@@ -1,0 +1,37 @@
+<form class="form" #frmLogin="ngForm" (ngSubmit)="onLogin(frmLogin)">
+  <h2 class="form__title">Inicia Sesión</h2>
+
+  <div class="form__container">
+    <div class="form__group">
+      <input
+        type="text"
+        id="username"
+        name="correo"
+        class="form__input"
+        placeholder="Correo"
+        ngModel
+        required
+      />
+      <label for="nombre" class="form__label">Correo:</label>
+      <span class="form_line"></span>
+    </div>
+    <div class="form__group">
+      <input
+        type="password"
+        id="password"
+        name="password"
+        class="form__input"
+        placeholder="Contraseña"
+        ngModel
+        required
+      />
+      <label for="password" class="form__label">Contraseña:</label>
+      <span class="form_line"></span>
+    </div>
+    <input type="submit" class="form__submit" value="Ingresar" />
+  </div>
+  <div class="recover">
+    <p>No recuerdas tu contraseña? recuperala</p>
+    <a href="recover">aquí</a>
+  </div>
+</form>

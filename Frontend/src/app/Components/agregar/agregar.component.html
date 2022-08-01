@@ -1,0 +1,124 @@
+<div class="container">
+  <p>Agregar producto</p>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <form action="">
+        <div class="mb-3">
+          <label class="form-label">Nombre del Producto</label>
+          <input
+            [(ngModel)]="producto.nombre_producto"
+            type="text"
+            class="form-control"
+            name="nombre"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Precio del Producto</label>
+          <input
+            [(ngModel)]="producto.precio_producto"
+            type="text"
+            class="form-control"
+            name="Precio del Producto"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Cantidad</label>
+          <input
+            [(ngModel)]="producto.cantidad"
+            type="text"
+            class="form-control"
+            name="Cantidad"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Descripcion del Producto</label>
+          <input
+            [(ngModel)]="producto.desc"
+            type="text"
+            class="form-control"
+            name="Descripcion del Producto"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrese una sub categoria: </label>
+          <input
+            [(ngModel)]="producto.id_sub_categoria"
+            type="text"
+            class="form-control"
+            name="Ingrese una sub categoria:"
+          />
+        </div>
+
+        <!-- <div class="mb-3">
+          <label class="form-label">Categorias: </label>
+          <select name="Categorias">
+            <option
+              *ngFor="let cat of listarCategoria"
+              [ngValue]="cat"
+              (click)="(cat.id_categoria)"
+            >
+              {{ cat.nombre }}
+            </option>
+          </select>
+        </div> -->
+
+
+
+        <div class="mb-3">
+          <label class="form-label">Sub-Categorias: </label>
+          <select name="Sub-Categorias">
+            <option
+              *ngFor="let sub of listarSubCategoria"
+              [ngValue]="sub"
+              (click)="(sub.id_sub_categoria)"
+            >
+              {{ sub.nombre }}
+            </option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Url Imagen</label>
+          <input
+            [(ngModel)]="producto.url"
+            type="text"
+            class="form-control"
+            name="Url Imagen"
+          />
+        </div>
+        <button (click)="agregarProducto()" class="btn btn-primary">
+          Agregar
+        </button>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <p>Mostrar</p>
+
+      <form>
+        <div class="mb-3">
+          <label class="form-label">{{ producto.url }}</label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">{{ producto.nombre_producto }}</label>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">{{ producto.precio_producto }}</label>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">{{ producto.cantidad }}</label>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">{{ producto.desc }}</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
